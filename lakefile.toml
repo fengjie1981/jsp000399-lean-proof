@@ -1,0 +1,20 @@
+name = "Jsp000399"
+version = "0.1.0"
+keywords = ["math"]
+defaultTargets = ["Jsp000399"]
+
+[leanOptions]
+pp.unicode.fun = true
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+maxSynthPendingDepth = 3
+
+# Mathlib 锁定到 v4.34.0 窗口最新 commit（与 Lean 4.34.1 同 minor，olen 兼容，可命中官方预编译缓存）
+# 必须用 commit SHA，不能用 rev="v4.34.1"（会触发 reservoir 解析失败）
+[[require]]
+name = "mathlib"
+scope = "leanprover-community"
+rev = "ba22a8986c7bb38a6f340cc151b98692dc4ce6bf"
+
+[[lean_lib]]
+name = "Jsp000399"
